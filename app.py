@@ -663,6 +663,9 @@ async def main():
     app.router.add_get('/', http_handler)
     app.router.add_get(f'/{SUB_PATH}', http_handler)
     app.router.add_get(f'/{WSPATH}', websocket_handler)
+
+    if __name__ == '__main__':
+    web.run_app(app, port=PORT)
     
     # 启动服务
     runner = web.AppRunner(app)
